@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Nana Calc</title>
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="icon" type="image/icon type" href="mt-logo-blk.png">
+    <link rel="stylesheet" type="text/css" href="nana-calc.css">
 </head>
+<div class="navBar">
+    <img class="navLogo" src="mt-logo-blk.png" alt="My Txns Logo">
+    <ul>
+        <li><a href="https://www.mytxns.com/" style="text-decoration:none;">MyTxns</a></li>
+        <li><a href="index copy.html" style="text-decoration:none;">Calc</a></li>
+    </ul>
+</div>
 
     <body>
 
@@ -53,15 +61,15 @@
                     <option label="17" value="17"></option>
                     <option label="18" value="18"></option>
                     <option label="19" value="19"></option>
-                    <option label="19" value="20"></option>
+                    <option label="20" value="20"></option>
                 </select>
         <br>
         <br>
-        TOTAL NANAS : <input type="text" name="nanas" id="total_nanas" />
+        TOTAL NANAS : <input type="text" name="nanas" id="total_nanas" readonly="readonly"/>
         <br>
-        TOTAL RUNS : <input type="text" name="runs" id="total_runs" />
+        TOTAL RUNS : <input type="text" name="runs" id="total_runs" readonly="readonly"/>
         <br>
-        TTL KONGIUM : <input type="text" name="kg" id="total_kg" />
+        TTL KONGIUM : <input type="text" name="kg" id="total_kg" readonly="readonly"/>
 
         <script type="text/javascript">
             function ttlNanas() {
