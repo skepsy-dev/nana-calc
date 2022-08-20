@@ -102,3 +102,46 @@ let kongium = {
     lvl19 : 2000,
     lvl20 : null,
     }
+
+
+
+// for drop down number inputs
+        <label for="lvl_3">CURRENT LVL:</label>
+                <select type="number" placeholder="CURRENT LVL:" id="lvl_3" name="lvl_3" min="1" max="19" required>
+                    <option label="2" value="2"></option>
+                    <option label="3" value="3"></option>
+                    <option label="4" value="4"></option>
+                    <option label="5" value="5"></option>
+                    <option label="6" value="6"></option>
+                    <option label="7" value="7"></option>
+                    <option label="8" value="8"></option>
+                    <option label="9" value="9"></option>
+                    <option label="10" value="10"></option>
+                    <option label="11" value="11"></option>
+                    <option label="12" value="12"></option>
+                    <option label="13" value="13"></option>
+                    <option label="14" value="14"></option>
+                    <option label="15" value="15"></option>
+                    <option label="16" value="16"></option>
+                    <option label="17" value="17"></option>
+                    <option label="18" value="18"></option>
+                    <option label="19" value="19"></option>
+                    <option label="20" value="20"></option>
+                </select>
+
+
+
+// Old nums field inputs .js
+        <fieldset>
+            <legend><h1>NANA CALCULATOOR</h1></legend>
+            <form action="action_page.php" method="get">
+
+
+                <label for="lvl_1"></label>
+                <input type="number" placeholder="CURRENT LVL:" id="lvl_1" name="lvl_1" min="1" max="19" required>
+
+                <br><br>
+
+                <label for="lvl_2"></label>
+                <input type="number" placeholder="NEXT LVL:" id="lvl_2" name="lvl_2" min="2" max="20" required>
+                <br><br>
