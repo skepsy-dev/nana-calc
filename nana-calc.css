@@ -1,9 +1,27 @@
+
+.nanaBody {
+background-color: rgb(0, 0, 0);
+font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('LuloClean.woff2') format('woff2'),
+        url('LuloClean.woff') format('woff');
+}
+
+div {
+    font-family: 'MyWebFont';
+}
+
+
+
 .navBar {
     position: sticky;
     top: 0;
     border: none;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 1fr 70% 1fr;
     background-color: none;
 }
 
@@ -19,11 +37,62 @@ ul {
     margin: 0%;
     padding-top: 3%;
     padding-right: 0%;
+    text-decoration: none;
 }
 
 li {
     display: inline;
     padding: 10px;
     float: right;
+    text-decoration: none;
+}
 
+.h1 {
+    text-align: center;
+    font-family: 'MyWebFont';
+    color: #ffffff;
+}
+
+.form {
+    background-color: #fffada;
+    color: #000000;
+    width: 600px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+fieldset {
+    border: none;
+}
+.lvl1 {
+    text-align: center;
+    float: left;
+    padding-left: 80px;
+    padding-top: 37px;
+}
+
+.lvl2 {
+    text-align: center;
+    float:right;
+    padding-right: 80px;
+    padding-top: 20px;
+
+}
+
+.totalsDiv {
+    margin: 20px;
+    text-align: center;
+}
+
+.imgNana {
+    max-width: 100px;
+    max-height: 100px;
+    rotate: -30deg;
+}
+
+.imgVx {
+    float: right;
+    max-width: 150px;
 }
