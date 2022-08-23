@@ -16,7 +16,7 @@ div {
 /* below added for nav 'nana' dropdown menu */ 
 li {
     display: block;
-    transition-duration: 0.5s;
+    transition-duration: 0.25s;
 }
 
 li:hover {
@@ -52,7 +52,6 @@ ul li ul li {
     grid-template-columns: 1fr 70% 1fr;
     background-color: #fffada;
     padding-bottom: 15px;
-    opacity: 85%;
 }
 
 .navLogo {
