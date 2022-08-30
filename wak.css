@@ -138,3 +138,7 @@ ul li ul li {
   .sb__game-over--hidden {
     display: none;
   } */
+
+  .footNote {
+    color: #ffffff;
+  }
