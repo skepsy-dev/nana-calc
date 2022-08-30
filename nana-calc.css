@@ -123,13 +123,13 @@ fieldset {
     max-height: 100px;
     rotate: -30deg;
     top: 40%;
-    padding-left: 7%;
+    padding-left: 5%;
 }
 
 .imgVx {
     position: absolute;
     float: right;
     max-width: 150px;
-    margin-left: 70%;
+    margin-left: 73%;
     top: 45%;
 }
