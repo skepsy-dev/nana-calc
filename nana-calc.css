@@ -1,56 +1,26 @@
 
 .nanaBody {
-background-color: rgb(0, 0, 0);
+background-color: #222222;
 font-family: Arial, Helvetica, sans-serif;
 }
 
 @font-face {
     font-family: 'MyWebFont';
-    src: url('LuloClean.woff2') format('woff2'),
-        url('LuloClean.woff') format('woff');
+    src: url('font/LuloClean.woff2') format('woff2'),
+        url('font/LuloClean.woff') format('woff');
 }
 
 div {
     font-family: 'MyWebFont';
 }
-/* below added for nav 'nana' dropdown menu */ 
-li {
-    display: block;
-    transition-duration: 0.25s;
-}
-
-li:hover {
-    cursor: pointer;
-}
-
-ul li ul {
-    visibility: hidden;
-    position: absolute;
-    transition: all 0.25s ease;
-    display: none;
-    text-decoration: none;
-}
-
-ul li:hover>ul,
-ul li ul:hover {
-    visibility: visible;
-    display: block;
-    background-color: #fffada;
-}
-
-ul li ul li {
-    clear: both;
-    width: 110%;
-}
-/* end nav dropdown */
 
 .navBar {
     position: sticky;
     top: 0;
     border: none;
     display: grid;
-    grid-template-columns: 1fr 70% 1fr;
-    background-color: #fffada;
+    grid-template-columns: 7% 86% 7%;
+    background-color: none;
     padding-bottom: 15px;
 }
 
@@ -73,6 +43,38 @@ li {
     padding: 10px;
     float: right;
 }
+
+/* below added for nav 'nana' dropdown menu */ 
+li {
+    display: block;
+    transition-duration: 0.25s;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+ul li ul {
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.25s ease;
+    display: none;
+    text-decoration: none;
+}
+
+ul li:hover>ul,
+ul li ul:hover {
+    visibility: visible;
+    display: block;
+    background-color: #222222;
+}
+
+ul li ul li {
+    clear: both;
+    width: 110%;
+}
+/* end nav dropdown */
+
 
 .h1 {
     text-align: center;
@@ -112,15 +114,22 @@ fieldset {
 .totalsDiv {
     margin: 20px;
     text-align: center;
+    padding-bottom: 10%;
 }
 
 .imgNana {
+    position: absolute;
     max-width: 100px;
     max-height: 100px;
     rotate: -30deg;
+    top: 40%;
+    padding-left: 7%;
 }
 
 .imgVx {
+    position: absolute;
     float: right;
     max-width: 150px;
+    margin-left: 70%;
+    top: 45%;
 }
