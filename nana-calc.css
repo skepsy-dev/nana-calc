@@ -14,36 +14,100 @@ div {
     font-family: 'MyWebFont';
 }
 
+/* start navbar */
+
 .navBar {
-    position: sticky;
-    top: 0;
-    border: none;
-    display: grid;
-    grid-template-columns: 7% 1fr 7%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
     background-color: none;
-    padding-bottom: 15px;
+    color: white;
 }
 
 .navLogo {
     width: 50px;
     height: 50px;
-    padding-left: 69%;
-    padding-top: 10%;
+    padding-left: 80%;
+    padding-top: 20%;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0%;
-    padding-top: 3%;
-    padding-right: 0%;
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-li {
-    display: inline;
-    padding: 10px;
-    float: right;
+.navbar-links li {
+    list-style: none;
+    text-size-adjust: 5px;
 }
 
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: .77em;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .navbar-links li {
+        text-align: right;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* end navbar */
 /* below added for nav 'nana' dropdown menu */ 
 li {
     display: block;
