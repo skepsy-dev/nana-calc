@@ -175,6 +175,12 @@ fieldset {
 
 }
 
+.resultField {
+    max-width: 55px;
+    border: none;
+    background-color: #fffada;
+}
+
 .totalsDiv {
     margin: 20px;
     text-align: center;
