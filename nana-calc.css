@@ -159,6 +159,7 @@ ul li ul li {
 
 fieldset {
     border: none;
+    margin: auto;
 }
 .lvl1 {
     text-align: center;
@@ -200,6 +201,6 @@ fieldset {
     position: absolute;
     float: right;
     max-width: 150px;
-    margin-left: 73%;
+    margin-left: 63%;
     top: 45%;
 }
