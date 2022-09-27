@@ -172,13 +172,13 @@ fieldset {
     float:right;
     padding-right: 80px;
     padding-top: 20px;
-
 }
 
 .resultField {
-    max-width: 55px;
+    max-width: 80px;
     border: none;
     background-color: #fffada;
+    font-family: 'MyWebFont';
 }
 
 .totalsDiv {
