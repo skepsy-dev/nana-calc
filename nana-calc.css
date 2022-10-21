@@ -1,35 +1,293 @@
 
-.nanaBody {
-background-color: #222222;
-font-family: Arial, Helvetica, sans-serif;
-}
-
 @font-face {
     font-family: 'MyWebFont';
     src: url('font/LuloClean.woff2') format('woff2'),
         url('font/LuloClean.woff') format('woff');
 }
 
+/* global */
+
+.nanaBody {
+    background-color: #222222;
+    font-family: 'MyWebFont';
+    text-align: center;
+}
+
+/* body,
+html {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+h2 {
+    text-align: center;
+    font-family: 'MyWebFont';
+    color: #ffffff;
+}
+
+p {
+    font-family: 'MyWebFont';
+    font-size: 10px;
+    color: grey;
+}
+
 div {
     font-family: 'MyWebFont';
 }
 
+fieldset {
+    border: none;
+    margin: auto;
+}
+
+form {
+    font-family: 'MyWebFont';
+    font-size: 13px;
+    text-align: center;
+}
+
+
+
+
+
+/* 2 vx */
+.field_two {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+.two_vx1 {
+    padding-top: 37px;
+}
+
+.two_vx2 {
+    padding-top: 10px;
+}
+
+/* 3 vx */
+.field_three {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+.three_vx1 {
+    padding-top: 37px;
+}
+
+.three_vx2 {
+    padding-top: 10px;
+}
+
+.three_vx3 {
+    padding-top: 10px;
+}
+
+/* 4 vx */
+.field_four {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+.four_vx12 {
+    padding-top: 37px;
+}
+
+.four_vx34 {
+    padding-top: 10px;
+}
+
+/* 5 vx */
+.field_five {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+.five_vx12 {
+    padding-top: 37px;
+}
+
+.five_vx34 {
+    padding-top: 10px;
+}
+
+.five_vx5 {
+    padding-top: 20px;
+}
+
+/* 1 vx */ 
+
+/* want to hide images wen screen size small ie phone size */
+.field_one {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+
+.one_lvl1 {
+    text-align: center;
+    padding-top: 37px;
+}
+
+.one_lvl2 {
+    text-align: center;
+}
+
+/* all pgs */
+.resultField {
+    max-width: 100px;
+    border: none;
+    background-color: #fffada;
+    font-family: 'MyWebFont';
+}
+
+.totalsDiv {
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.imgNana {
+    position: absolute;
+    max-width: 100px;
+    max-height: 100px;
+    rotate: -30deg;
+    top: 40%;
+    padding-left: 5%;
+}
+
+.imgVx {
+    position: absolute;
+    float: right;
+    max-width: 150px;
+    margin-left: 67%;
+    top: 45%;
+}
+
+
+
+
+/* tabs */
+
+ /* Style tab links */
+.tabsDiv {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .tablink {
+     background-color: inherit;
+     color: white;
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     padding: 3px 10px;
+     margin-bottom: 15px;
+     font-size: 17px;
+     width: fit-content;
+ }
+
+ .tablink:hover {
+    color: #fffada;
+    border-bottom: 0.5px solid #fffada;
+ }
+
+ /* Create an active/current "tab button" class */
+ .tablink button:active {
+    color: #fffada;
+    border-bottom: 0.5px solid #fffada;
+ }
+
+ /* Style the tab content (and add height:100% for full page content) */
+ .tabcontent {
+     color: white;
+     display: none;
+     height: 100%;
+ }
+
+ #pg1vx {
+     background-color: none;
+ }
+
+ #pg2vx {
+     background-color: none;
+ }
+
+ #pg3vx {
+     background-color: none;
+ }
+
+ #pg4vx {
+     background-color: none;
+ }
+
+ #pg5vx {
+     background-color: none;
+ }
+
+
+
 /* start navbar */
 
 .navBar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
     background-color: none;
-    color: white;
 }
 
 .navLogo {
-    width: 50px;
-    height: 50px;
-    padding-left: 80%;
-    padding-top: 20%;
+    width: auto;
+    height: 45px;
+    float: left;
+    padding-top: 2%;
+    padding-left: 3%;
+}
+
+.ckLogo {
+    width: auto;
+    height: 40px;
+}
+
+.nanaLogo {
+    width: auto;
+    height: 40px;
+}
+
+.mtLogo {
+    width: auto;
+    height: 35px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+}
+
+.navbar-links {
+    float: right;
+    margin: 3% 10%;
 }
 
 .navbar-links ul {
@@ -46,31 +304,30 @@ div {
 .navbar-links li a {
     display: block;
     text-decoration: none;
-    color: white;
     padding: 1rem;
     font-size: .77em;
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    background-color: none;
 }
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
-    right: 1rem;
+    top: 3.5%;
+    right: 5%;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    width: 20px;
+    height: 13px;
 }
 
 .toggle-button .bar {
-    height: 3px;
+    height: 1px;
     width: 100%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 @media (max-width: 800px) {
@@ -108,99 +365,3 @@ div {
 }
 
 /* end navbar */
-/* below added for nav 'nana' dropdown menu */ 
-li {
-    display: block;
-    transition-duration: 0.25s;
-}
-
-li:hover {
-    cursor: pointer;
-}
-
-ul li ul {
-    visibility: hidden;
-    position: absolute;
-    transition: all 0.25s ease;
-    display: none;
-    text-decoration: none;
-}
-
-ul li:hover>ul,
-ul li ul:hover {
-    visibility: visible;
-    display: block;
-    background-color: #222222;
-}
-
-ul li ul li {
-    clear: both;
-    width: 110%;
-}
-/* end nav dropdown */
-
-
-.h1 {
-    text-align: center;
-    font-family: 'MyWebFont';
-    color: #ffffff;
-    padding-bottom: 2%;
-}
-
-.form {
-    background-color: #fffada;
-    color: #000000;
-    width: 600px;
-    display: block;
-    position: relative;
-    margin: auto;
-    border-radius: 5px
-}
-
-fieldset {
-    border: none;
-    margin: auto;
-}
-.lvl1 {
-    text-align: center;
-    float: left;
-    padding-left: 80px;
-    padding-top: 37px;
-}
-
-.lvl2 {
-    text-align: center;
-    float:right;
-    padding-right: 80px;
-    padding-top: 20px;
-}
-
-.resultField {
-    max-width: 80px;
-    border: none;
-    background-color: #fffada;
-    font-family: 'MyWebFont';
-}
-
-.totalsDiv {
-    margin: 20px;
-    text-align: center;
-    padding-bottom: 10%;
-}
-
-.imgNana {
-    position: absolute;
-    max-width: 100px;
-    max-height: 100px;
-    rotate: -30deg;
-    top: 40%;
-    padding-left: 5%;
-}
-
-.imgVx {
-    position: absolute;
-    float: right;
-    max-width: 150px;
-    margin-left: 67%;
-    top: 45%;
-}
