@@ -80,9 +80,9 @@ form {
 
 .resultField2 {
     width: 75px;
-    border: none;
+    /* border: none;
     background-color: #fffada;
-    font-family: 'MyWebFont';
+    font-family: 'MyWebFont'; */
 }
 
 .resultField3 {
