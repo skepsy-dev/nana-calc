@@ -189,7 +189,6 @@ var avgKgCollect = function (lvl1, lvl2, ttlRuns) {
   var _ttlRuns = ttlRuns;
   var ttl_avg_kg = 0;
 
-  console.log(_ttlRuns);
 
   if (lvl1 == lvl2) {
     ttl_avg_kg += (ttlRuns * avgKg[lvl2 - 1]);
@@ -201,12 +200,9 @@ var avgKgCollect = function (lvl1, lvl2, ttlRuns) {
       
       ttl_avg_kg += lvlkg;
       _ttlRuns -= runs[i];
-      console.log(_ttlRuns);
-
     }
   }
-  console.log(_ttlRuns);
-  console.log(ttl_avg_kg);
+
   if (_ttlRuns > 0) {
     ttl_avg_kg += (_ttlRuns * avgKg[lvl2 - 1]);
   }
@@ -214,7 +210,6 @@ var avgKgCollect = function (lvl1, lvl2, ttlRuns) {
   return ttl_avg_kg;
 };
 
-console.log();
 
 // tabs
 

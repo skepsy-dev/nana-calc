@@ -48,7 +48,62 @@ form {
 }
 
 
+/* 1 vx */
 
+.field_one {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+
+.one_lvl1 {
+    text-align: center;
+    padding-top: 37px;
+}
+
+.one_lvl2 {
+    text-align: center;
+}
+
+/* all pgs */
+.resultField1 {
+    width: 60px;
+    border: none;
+    background-color: #fffada;
+    font-family: 'MyWebFont';
+}
+
+.resultField2 {
+    width: 75px;
+    border: none;
+    background-color: #fffada;
+    font-family: 'MyWebFont';
+}
+
+.resultField3 {
+    width: 98px;
+    border: none;
+    background-color: #fffada;
+    font-family: 'MyWebFont';
+}
+
+.resultField4 {
+    width: 85px;
+    border: none;
+    background-color: #fffada;
+    font-family: 'MyWebFont';
+}
+
+.totalsDiv {
+    margin: 20px;
+    text-align: center;
+    padding-bottom: 10%;
+}
 
 
 /* 2 vx */
@@ -135,61 +190,6 @@ form {
     padding-top: 20px;
 }
 
-/* 1 vx */ 
-
-/* want to hide images wen screen size small ie phone size */
-.field_one {
-    background-color: #fffada;
-    color: #000000;
-    width: 300px;
-    display: block;
-    position: relative;
-    margin: auto;
-    border-radius: 5px
-}
-
-
-.one_lvl1 {
-    text-align: center;
-    padding-top: 37px;
-}
-
-.one_lvl2 {
-    text-align: center;
-}
-
-/* all pgs */
-.resultField {
-    max-width: 100px;
-    border: none;
-    background-color: #fffada;
-    font-family: 'MyWebFont';
-}
-
-.totalsDiv {
-    margin: 20px;
-    text-align: center;
-    padding-bottom: 10%;
-}
-
-.imgNana {
-    position: absolute;
-    max-width: 100px;
-    max-height: 100px;
-    rotate: -30deg;
-    top: 40%;
-    padding-left: 5%;
-}
-
-.imgVx {
-    position: absolute;
-    float: right;
-    max-width: 150px;
-    margin-left: 67%;
-    top: 45%;
-}
-
-
 
 
 /* tabs */
@@ -265,7 +265,7 @@ form {
     height: 45px;
     float: left;
     padding-top: 3%;
-    padding-left: 3%;
+    padding-left: 10%;
 }
 
 .ckLogo {
@@ -314,7 +314,7 @@ form {
 
 .toggle-button {
     position: absolute;
-    top: 3.5%;
+    top: 4%;
     right: 5%;
     display: none;
     flex-direction: column;
