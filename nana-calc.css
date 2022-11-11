@@ -90,8 +90,8 @@ form {
 }
 
 .usdLogo {
-    width: auto;
-    height: 13px;
+    width: 13px;
+    height: auto;
 }
 
 .ethLogo {
