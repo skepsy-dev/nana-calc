@@ -123,18 +123,17 @@ form {
 
 .usdLogo {
     width: auto;
-    height: 13px;
+    height: 10px;
 }
 
 .ethLogo {
     width: auto;
-    height: 13px;
+    height: 10px;
 }
 
 .totalsDiv {
     margin: 20px;
     text-align: center;
-    padding-bottom: 10%;
 }
 
 
