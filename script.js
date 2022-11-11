@@ -13,13 +13,17 @@ function singleVx() {
   var num2 = document.getElementsByName('one_lvl')[1].value; // [lvl2]
   var runs = totalRuns(num1, num2);
   var kg = totalKg(num1, num2);
-  var kgCollect = avgKgCollect(num1, num2, runs)
+  var kgCollect = avgKgCollect(num1, num2, runs);
+  var nanas = (runs * 0.4);
 
   document.getElementById('single_ttl_runs').value = runs;
-  document.getElementById('single_ttl_nanas').value = (runs * 0.4);
+  document.getElementById('single_ttl_nanas').value = nanas;
   document.getElementById('single_ttl_kg').value = kg;
   document.getElementById('single_kg_collect').value = kgCollect;
+
+  nanaPricesSingle(nanas);
 }
+
 
 // 2 VX
 function twoVx() {
@@ -28,6 +32,7 @@ function twoVx() {
   var ttlRuns = 0;
   var ttlKg = 0;
   var ttlKgCollect = 0;
+  
  
   for (let i = 0; i < team.length; i += 2 ) {
     var lvl1 = team[i].value;
@@ -43,17 +48,21 @@ function twoVx() {
     ttlKg += kg;
   } 
 
-   for (let i = 0; i < team.length; i += 2 ) {
-      var lvl1 = team[i].value;
-      var lvl2 = team[i + 1].value;
+  for (let i = 0; i < team.length; i += 2 ) {
+    var lvl1 = team[i].value;
+    var lvl2 = team[i + 1].value;
 
-      ttlKgCollect += avgKgCollect(lvl1, lvl2, ttlRuns);     
-   }
+    ttlKgCollect += avgKgCollect(lvl1, lvl2, ttlRuns);     
+  }
 
-    document.getElementById('two_ttl_runs').value = ttlRuns;
-    document.getElementById('two_ttl_nanas').value = (ttlRuns * nanaCost);
-    document.getElementById('two_ttl_kg').value = ttlKg;
-    document.getElementById('two_kg_collect').value = ttlKgCollect;
+  var nanas = ttlRuns * nanaCost;
+
+  document.getElementById('two_ttl_runs').value = ttlRuns;
+  document.getElementById('two_ttl_nanas').value = nanas;
+  document.getElementById('two_ttl_kg').value = ttlKg;
+  document.getElementById('two_kg_collect').value = ttlKgCollect;
+
+  nanaPricesTwoVx(nanas);
 }
 
 // 3 VX
@@ -84,10 +93,14 @@ function threeVx() {
       ttlKgCollect += avgKgCollect(lvl1, lvl2, ttlRuns);     
    }
 
+  var nanas = ttlRuns * nanaCost;
+
   document.getElementById('three_ttl_runs').value = ttlRuns;
-  document.getElementById('three_ttl_nanas').value = (ttlRuns * nanaCost);
+  document.getElementById('three_ttl_nanas').value = nanas;
   document.getElementById('three_ttl_kg').value = ttlKg;
   document.getElementById('three_kg_collect').value = ttlKgCollect;
+
+  nanaPricesThreeVx(nanas);
 }
 
 // 4 VX
@@ -118,10 +131,14 @@ function fourVx() {
       ttlKgCollect += avgKgCollect(lvl1, lvl2, ttlRuns);     
    }
 
+  var nanas = ttlRuns * nanaCost;
+
   document.getElementById('four_ttl_runs').value = ttlRuns;
-  document.getElementById('four_ttl_nanas').value = (ttlRuns * nanaCost);
+  document.getElementById('four_ttl_nanas').value = nanas;
   document.getElementById('four_ttl_kg').value = ttlKg;
   document.getElementById('four_kg_collect').value = ttlKgCollect;
+
+  nanaPricesFourVx(nanas);
 }
 
 // 5 VX
@@ -152,10 +169,14 @@ function fiveVx() {
       ttlKgCollect += avgKgCollect(lvl1, lvl2, ttlRuns);     
    }
 
+  var nanas = ttlRuns * nanaCost;
+
   document.getElementById('five_ttl_runs').value = ttlRuns;
-  document.getElementById('five_ttl_nanas').value = (ttlRuns * nanaCost);
+  document.getElementById('five_ttl_nanas').value = nanas;
   document.getElementById('five_ttl_kg').value = ttlKg;
   document.getElementById('five_kg_collect').value = ttlKgCollect;
+
+  nanaPricesFiveVx(nanas);
 }
 
 // global calc functions
@@ -206,9 +227,81 @@ var avgKgCollect = function (lvl1, lvl2, ttlRuns) {
   if (_ttlRuns > 0) {
     ttl_avg_kg += (_ttlRuns * avgKg[lvl2 - 1]);
   }
-
+  
   return ttl_avg_kg;
 };
+
+// Coingecko prices eth and usd url request
+
+async function nanaPricesSingle (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('single_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('single_eth_price').value = nanaEthPrice * nanas;
+}
+
+async function nanaPricesTwoVx (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('two_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('two_eth_price').value = nanaEthPrice * nanas;
+}
+
+async function nanaPricesThreeVx (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('three_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('three_eth_price').value = nanaEthPrice * nanas;
+}
+
+async function nanaPricesFourVx (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('four_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('four_eth_price').value = nanaEthPrice * nanas;
+}
+
+async function nanaPricesFiveVx (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('five_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('five_eth_price').value = nanaEthPrice * nanas;
+}
 
 
 // tabs
@@ -229,5 +322,10 @@ function openPage(pageName, elmnt, color) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+
+
+
 
 // end

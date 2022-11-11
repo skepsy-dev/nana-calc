@@ -5,6 +5,7 @@
         url('font/LuloClean.woff') format('woff');
 }
 
+
 /* global */
 
 .nanaBody {
@@ -48,28 +49,6 @@ form {
 }
 
 
-/* 1 vx */
-
-.field_one {
-    background-color: #fffada;
-    color: #000000;
-    width: 300px;
-    display: block;
-    position: relative;
-    margin: auto;
-    border-radius: 5px
-}
-
-
-.one_lvl1 {
-    text-align: center;
-    padding-top: 37px;
-}
-
-.one_lvl2 {
-    text-align: center;
-}
-
 /* all pgs */
 .resultField1 {
     width: 60px;
@@ -99,10 +78,54 @@ form {
     font-family: 'MyWebFont';
 }
 
+.priceField {
+    width: 80px;
+    border: none;
+    background-color: #fffada;
+    font-family: 'MyWebFont';
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.usdLogo {
+    width: auto;
+    height: 13px;
+}
+
+.ethLogo {
+    width: auto;
+    height: 13px;
+}
+
 .totalsDiv {
     margin: 20px;
     text-align: center;
     padding-bottom: 10%;
+}
+
+
+/* 1 vx */
+
+.field_one {
+    background-color: #fffada;
+    color: #000000;
+    width: 300px;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+
+.one_lvl1 {
+    text-align: center;
+    padding-top: 37px;
+}
+
+.one_lvl2 {
+    text-align: center;
 }
 
 
@@ -171,7 +194,7 @@ form {
 .field_five {
     background-color: #fffada;
     color: #000000;
-    width: 300px;
+    width: 320px;
     display: block;
     position: relative;
     margin: auto;
