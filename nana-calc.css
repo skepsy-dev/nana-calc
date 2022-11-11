@@ -48,9 +48,7 @@ form {
     text-align: center;
 }
 
-
 /* all pgs */
-
 
 .priceDiv {
     margin: 0 35%;
@@ -61,7 +59,7 @@ form {
     width: auto;
     height: 13px;
     transform: rotate(300deg);
-    padding-right: 7px;
+    padding-right: 8px;
 }
 
 .dollarSymbolWhite {
