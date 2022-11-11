@@ -50,6 +50,40 @@ form {
 
 
 /* all pgs */
+
+
+.priceDiv {
+    margin: 0 35%;
+    display: inline-flex;
+}
+
+.nanaPriceLogo {
+    width: auto;
+    height: 13px;
+    transform: rotate(300deg);
+    padding-right: 7px;
+}
+
+.dollarSymbolWhite {
+    width: auto;
+    height: 12px;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+.nanaPriceField {
+    width: 80px;
+    border: none;
+    background-color: #222222;
+    font-family: 'MyWebFont';
+    font-size: 11px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 .resultField1 {
     width: 60px;
     border: none;
@@ -90,8 +124,8 @@ form {
 }
 
 .usdLogo {
-    width: 13px;
-    height: auto;
+    width: auto;
+    height: 13px;
 }
 
 .ethLogo {

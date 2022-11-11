@@ -11,7 +11,7 @@
         <script src="script.js" defer></script>
     </head>
 
-    <body class="nanaBody">
+    <body class="nanaBody" onload="nanaPrice()">
 
         <nav class="navbar">
             <a href="http://www.mytxns.com/login.php" target="_blank"><img class="navLogo" src="calc-images/mt-logo-white.png" alt="MyTxns"></a>
@@ -28,6 +28,13 @@
         </nav>
         <br><br>
         <br><br><br> 
+
+        <div class="priceDiv">
+        <img class="nanaPriceLogo" src="calc-images/ck-nana.png" alt="banana">
+        <!-- <p class="dollarSymbolWhite">$</p> -->
+        <img class="dollarSymbolWhite" src="calc-images/dollar_symbol_white.png" alt="usd">
+        <input class="nanaPriceField" type="number" name="banana_price" id="banana_price" readonly="readonly" />
+        </div>
 
         <h2 style="text-align: center;">NANA CALCULATOOR</h2>
 

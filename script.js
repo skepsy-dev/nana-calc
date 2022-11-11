@@ -5,7 +5,6 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
-// add reset button ? https://stackoverflow.com/questions/23697985/reset-multiple-select-option-value-to-zero
 
 // 1 VX
 function singleVx() {
@@ -232,6 +231,14 @@ var avgKgCollect = function (lvl1, lvl2, ttlRuns) {
 };
 
 // Coingecko prices eth and usd url request
+
+async function nanaPrice() {
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+
+  document.getElementById('banana_price').value = nanaUsdPrice;
+}
 
 async function nanaPricesSingle (nanas) {
   
