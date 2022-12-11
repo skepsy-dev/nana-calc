@@ -121,6 +121,13 @@ form {
     text-overflow: ellipsis;
 }
 
+.nanaByRunCost {
+    width: auto;
+    height: 10px;
+    transform: rotate(300deg);
+    padding-right: 3px;
+}
+
 .usdLogo {
     width: auto;
     height: 10px;

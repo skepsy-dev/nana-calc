@@ -5,6 +5,20 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
 
+// Cost By Runs
+
+function ByRuns() {
+  var numRuns = document.getElementsByName('byRun')[0].value; // Number of Runs
+  var numVx = document.getElementsByName('byRun')[1].value; // Number of VX for Runs
+  // nana per run
+  var npr = (numVx * 0.4);
+  var ttlnana = (numRuns * npr);
+
+  document.getElementById('byRun_nana_price').value = ttlnana;
+
+  costByRuns(ttlnana);
+}
+
 
 // 1 VX
 function singleVx() {
@@ -239,6 +253,21 @@ async function nanaPrice() {
 
   document.getElementById('banana_price').value = nanaUsdPrice;
 }
+
+async function costByRuns (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('byRun_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('byRun_eth_price').value = nanaEthPrice * nanas;
+}
+
 
 async function nanaPricesSingle (nanas) {
   
