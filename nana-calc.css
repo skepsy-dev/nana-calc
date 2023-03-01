@@ -317,63 +317,69 @@ form {
 
 /* start navbar */
 
-.navBar {
+/* .navBar {
     background-color: none;
-}
+} */
 
 .navLogo {
     width: auto;
     height: 45px;
     float: left;
     padding-top: 3%;
-    padding-left: 10%;
+    padding-left: 5%;
 }
 
 .ckLogo {
     width: auto;
-    height: 40px;
+    height: 30px;
+    padding-top: 3%;
 }
 
 .nanaLogo {
     width: auto;
-    height: 40px;
+    height: 30px;
 }
 
-.mtLogo {
+/* .mtLogo {
     width: auto;
     height: 35px;
     padding-bottom: 2px;
     padding-left: 4px;
+} */
+
+.navProjLink {
+    text-decoration: none;
+    color: white;
 }
 
 .navbar-links {
     float: right;
-    margin: 3% 10%;
+    margin: 3% 5%;
 }
 
-.navbar-links ul {
+/* .navbar-links ul {
     display: flex;
     margin: 0;
     padding: 0;
-}
+} */
 
-.navbar-links li {
+/* .navbar-links li {
     list-style: none;
     text-size-adjust: 5px;
-}
+} */
 
-.navbar-links li a {
+/* .navbar-links li a {
     display: block;
     text-decoration: none;
     padding: 1rem;
     font-size: .77em;
-}
-
+} */
+/* 
 .navbar-links li:hover {
     background-color: none;
-}
+} */
 
-.toggle-button {
+/* .toggle-button {
     position: absolute;
     top: 4%;
     right: 5%;
@@ -423,6 +429,6 @@ form {
     .navbar-links.active {
         display: flex;
     }
-}
+} */
 
 /* end navbar */
