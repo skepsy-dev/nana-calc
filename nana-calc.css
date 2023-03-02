@@ -325,8 +325,17 @@ form {
     width: auto;
     height: 45px;
     float: left;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-left: 5%;
+}
+
+.navLeft {
+    float: left;
+    padding-top: 6%;
+    padding-left: 1%;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
 }
 
 .ckLogo {
@@ -346,11 +355,6 @@ form {
     padding-bottom: 2px;
     padding-left: 4px;
 } */
-
-.navProjLink {
-    text-decoration: none;
-    color: white;
-}
 
 .navbar-links {
     float: right;
