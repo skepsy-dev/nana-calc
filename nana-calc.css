@@ -325,13 +325,13 @@ form {
     width: auto;
     height: 45px;
     float: left;
-    padding-top: 2%;
-    padding-left: 5%;
+    padding-top: 27px;
+    padding-left: 25px;
 }
 
 .navLeft {
     float: left;
-    padding-top: 6%;
+    padding-top: 55px;
     padding-left: 1%;
     text-decoration: none;
     color: white;
@@ -341,7 +341,6 @@ form {
 .ckLogo {
     width: auto;
     height: 30px;
-    padding-top: 3%;
 }
 
 .nanaLogo {
@@ -349,16 +348,10 @@ form {
     height: 30px;
 }
 
-/* .mtLogo {
-    width: auto;
-    height: 35px;
-    padding-bottom: 2px;
-    padding-left: 4px;
-} */
-
 .navbar-links {
     float: right;
-    margin: 3% 5%;
+    margin-top: 35px;
+    margin-right: 25px;
 }
 
 /* .navbar-links ul {
