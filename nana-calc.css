@@ -5,12 +5,26 @@
         url('font/LuloClean.woff') format('woff');
 }
 
+ @font-face {
+     font-family: 'bodyFont';
+     src: url('font/Novecentosanswide-DemiBold-webfont.woff2') format('woff2'),
+         url('font/Novecentosanswide-DemiBold-webfont.woff') format('woff');
+ }
+
+ @font-face {
+     font-family: 'titleFont';
+     src: url('font/Novecentosanswide-Bold-webfont.woff2') format('woff2'),
+         url('font/Novecentosanswide-Bold-webfont.woff') format('woff');
+ }
+
+
+
 
 /* global */
 
 .nanaBody {
     background-color: #222222;
-    font-family: 'MyWebFont';
+    font-family: 'titleFont';
     text-align: center;
 }
 
@@ -23,18 +37,18 @@ html {
 
 h2 {
     text-align: center;
-    font-family: 'MyWebFont';
+    font-family: 'titleFont';
     color: #ffffff;
 }
 
 p {
-    font-family: 'MyWebFont';
-    font-size: 10px;
+    font-family: 'bodyFont';
+    font-size: 15px;
     color: grey;
 }
 
 div {
-    font-family: 'MyWebFont';
+    font-family: 'bodyFont';
 }
 
 fieldset {
@@ -43,10 +57,15 @@ fieldset {
 }
 
 form {
-    font-family: 'MyWebFont';
-    font-size: 13px;
+    font-family: 'bodyFont';
+    font-size: 15px;
     text-align: center;
 }
+
+button {
+    font-family: 'bodyFont';
+}
+
 
 /* all pgs */
 
@@ -59,22 +78,23 @@ form {
     width: auto;
     height: 13px;
     transform: rotate(300deg);
-    padding-right: 8px;
+    padding-right: 15px;
+    padding-top: 1px;
 }
 
 .dollarSymbolWhite {
     width: auto;
     height: 12px;
-    padding-right: 3px;
-    padding-top: 3px;
+    padding-right: 10px;
+    padding-top: 7px;
 }
 
 .nanaPriceField {
     width: 80px;
     border: none;
     background-color: #222222;
-    font-family: 'MyWebFont';
-    font-size: 11px;
+    font-family: 'bodyFont';
+    font-size: 17px;
     color: white;
     white-space: nowrap;
     overflow: hidden;
@@ -86,36 +106,40 @@ form {
     width: 60px;
     border: none;
     background-color: #fffada;
-    font-family: 'MyWebFont';
+    font-family: 'bodyFont';
+    font-size: 15px;
 }
 
 .resultField2 {
     width: 75px;
     border: none;
     background-color: #fffada;
-    font-family: 'MyWebFont';
+    font-family: 'bodyFont';
+    font-size: 15px;
 }
 
 .resultField3 {
     width: 98px;
     border: none;
     background-color: #fffada;
-    font-family: 'MyWebFont';
+    font-family: 'bodyFont';
+    font-size: 15px;
 }
 
 .resultField4 {
     width: 85px;
     border: none;
     background-color: #fffada;
-    font-family: 'MyWebFont';
+    font-family: 'bodyFont';
+    font-size: 15px;
 }
 
 .priceField {
     width: 80px;
     border: none;
     background-color: #fffada;
-    font-family: 'MyWebFont';
-    font-size: 11px;
+    font-family: 'bodyFont';
+    font-size: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -335,7 +359,7 @@ form {
     padding-left: 1%;
     text-decoration: none;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .ckLogo {

@@ -15,7 +15,7 @@
 
         <nav class="navbar">
             <a href="https://mytxns.com" target="_blank"><img class="navLogo" src="calc-images/mt-logo-white.png" alt="MyTxns"></a>
-            <a class="navLeft" href="https://mytxns.com" target="_blank">My Projects</a>
+            <a class="navLeft" href="https://mytxns.com" target="_blank">WL Tracking</a>
 
             <a href="#" class="toggle-button">
                 <!-- <span class="bar"></span>
@@ -37,15 +37,15 @@
         <input class="nanaPriceField" type="number" name="banana_price" id="banana_price" readonly="readonly" />
         </div>
 
-        <h2 style="text-align: center;">NANA CALCULATOOR</h2>
+        <h2 style="text-align: center;">Nana Calculatoor</h2>
 
     <div class="tabsDiv">
-        <button class="tablink" onclick="openPage('pg0runs', this)" id="defaultOpen">RUNS</button>
-        <button class="tablink" onclick="openPage('pg1vx', this)">1 VX</button>
-        <button class="tablink" onclick="openPage('pg2vx', this)">2 VX</button>
-        <button class="tablink" onclick="openPage('pg3vx', this)">3 VX</button>
-        <button class="tablink" onclick="openPage('pg4vx', this)">4 VX</button>
-        <button class="tablink" onclick="openPage('pg5vx', this)">5 VX</button>
+        <button class="tablink" onclick="openPage('pg0runs', this)" id="defaultOpen">Runs</button>
+        <button class="tablink" onclick="openPage('pg1vx', this)">1 vx</button>
+        <button class="tablink" onclick="openPage('pg2vx', this)">2 vx</button>
+        <button class="tablink" onclick="openPage('pg3vx', this)">3 vx</button>
+        <button class="tablink" onclick="openPage('pg4vx', this)">4 vx</button>
+        <button class="tablink" onclick="openPage('pg5vx', this)">5 vx</button>
     </div>
 
     <!-- Cost By Runs pg -->
@@ -53,15 +53,15 @@
     <fieldset class="field_one">
         <form>
             <div class="one_lvl1">
-                <label for="byRunNum">Number Runs:</label>
+                <label for="byRunNum">Number Runs :</label>
             <input onchange="ByRuns()" type="number" id="byRunNum" name="byRun" min="1" max="999999">
             </div>
             <br>
             <div class="one_lvl2">
-                <label for="byRunVx">Number VX:</label>
+                <label for="byRunVx">Number VX :</label>
                 <input onchange="ByRuns()" type="number" id="byRunVx" name="byRun" min="1" max="5">
             </div>
-                <p>Nana Cost: </p>
+                <p>Nana Cost : </p>
 
                 <img class="nanaByRunCost" src="calc-images/ck-nana.png" alt="banana">
                 <input class="priceField" type="number" name="byRun_nana_price" id="byRun_nana_price" readonly="readonly" />
@@ -82,7 +82,7 @@
         <fieldset class="field_one">
             <form>
                 <div class="one_lvl1">
-                    <label for="one_lvl_1">CURRENT LVL:</label>
+                    <label for="one_lvl_1">Current Lvl :</label>
                         <select onchange="singleVx()" type="number" id="one_lvl_1" name="one_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -107,7 +107,7 @@
                 </div>
                 <br>
                 <div class="one_lvl2">
-                    <label for="one_lvl_2">NEXT LVL:</label>
+                    <label for="one_lvl_2">Next Lvl :</label>
                         <select onchange="singleVx()" type="number" id="one_lvl_2" name="one_lvl" min="2" max="20" required>
                             <option label="2" value="2"></option>
                             <option label="3" value="3"></option>
@@ -132,22 +132,22 @@
                 </div>
                 
                 <div class="totalsDiv">
-                    <p>ttl req to lvl up:</p>
-                    RUNS: <input class="resultField1" type="number" name="single_ttl_runs" id="single_ttl_runs" readonly="readonly"/>
+                    <p>Ttl Required to Lvl Up :</p>
+                    Runs : <input class="resultField1" type="number" name="single_ttl_runs" id="single_ttl_runs" readonly="readonly"/>
                     <br><br>
-                    NANAS: <input class="resultField2" type="number" name="single_ttl_nanas" id="single_ttl_nanas" readonly="readonly"/>
+                    Nanas : <input class="resultField2" type="number" name="single_ttl_nanas" id="single_ttl_nanas" readonly="readonly"/>
                     <br><br>
-                    KONGIUM: <input class="resultField3" type="number" name="single_ttl_kg" id="single_ttl_kg" readonly="readonly"/>
+                    Kongium :<input class="resultField3" type="number" name="single_ttl_kg" id="single_ttl_kg" readonly="readonly"/>
                     <br><br>
-                    <p>Nana Cost: </p>
+                    <p>Nana Cost : </p>
                     <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
                     <input class="priceField" type="number" name="usd_price" id="single_usd_price" readonly="readonly" />
                     
                     <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
                     <input class="priceField" type="number" name="eth_price" id="single_eth_price" readonly="readonly" />
                     <br><br>
-                    <p>Collected from Runs: </p>
-                    AVG KG: <input class="resultField4" type="number" name="single_kg_collect" id="single_kg_collect" readonly="readonly" />
+                    <p>Collected from Runs : </p>
+                    Avg Kongium : <input class="resultField4" type="number" name="single_kg_collect" id="single_kg_collect" readonly="readonly" />
                 </div>
             </form>
         </fieldset>
@@ -158,7 +158,7 @@
             <fieldset class="field_two">
                 <form>
                     <div class="two_vx1">
-                        <label for="two_1lvl1">VX 1:</label>
+                        <label for="two_1lvl1">vx 1:</label>
                         <select class="teamSelect" onchange="twoVx()" type="number" id="two_1lvl1" name="two_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -205,7 +205,7 @@
                         </select>
                     </div>
                     <div class="two_vx2">
-                        <label for="two_2lvl1">VX 2:</label>
+                        <label for="two_2lvl1">vx 2:</label>
                         <select class="teamSelect" onchange="twoVx()" type="number" id="two_2lvl1" name="two_lvl" min="1" max="20" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -253,21 +253,21 @@
                     </div>
                     <br>
                     <div class="totalsDiv">
-                        <p>ttl req to lvl up:</p>
-                        RUNS: <input class="resultField1" type="number" name="two_ttl_runs" id="two_ttl_runs" readonly="readonly" />
+                        <p>Ttl Required to Lvl Up :</p>
+                        Runs : <input class="resultField1" type="number" name="two_ttl_runs" id="two_ttl_runs" readonly="readonly" />
                         <br><br>
-                        NANAS: <input class="resultField2" type="number" name="two_ttl_nanas" id="two_ttl_nanas" readonly="readonly" />
+                        Nanas : <input class="resultField2" type="number" name="two_ttl_nanas" id="two_ttl_nanas" readonly="readonly" />
                         <br><br>
-                        KONGIUM: <input class="resultField3" type="number" name="two_ttl_kg" id="two_ttl_kg" readonly="readonly" />
+                        Kongium : <input class="resultField3" type="number" name="two_ttl_kg" id="two_ttl_kg" readonly="readonly" />
                         <br><br>
-                        <p>Nana Cost: </p>
+                        <p>Nana Cost : </p>
                         <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
                         <input class="priceField" type="number" name="two_usd_price" id="two_usd_price" readonly="readonly" />
                         <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
                         <input class="priceField" type="number" name="two_eth_price" id="two_eth_price" readonly="readonly" />
                         <br><br>
-                        <p>Collected from Runs: </p>
-                        AVG KG: <input class="resultField4" type="number" name="two_kg_collect" id="two_kg_collect" readonly="readonly" />
+                        <p>Collected from Runs : </p>
+                        Avg Kongium : <input class="resultField4" type="number" name="two_kg_collect" id="two_kg_collect" readonly="readonly" />
                     </div>
                 </form>
             </fieldset>
@@ -278,7 +278,7 @@
             <fieldset class="field_three">
                 <form>
                     <div class="three_vx1">
-                        <label for="three_1lvl1">VX 1:</label>
+                        <label for="three_1lvl1">vx 1:</label>
                         <select class="teamSelect" onchange="threeVx()" type="number" id="three_1lvl1" name="three_lvl" min="1" max="20" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -325,7 +325,7 @@
                         </select>
                     </div>
                     <div class="three_vx2">
-                        <label for="three_2lvl1">VX 2:</label>
+                        <label for="three_2lvl1">vx 2:</label>
                         <select class="teamSelect" onchange="threeVx()" type="number" id="three_2lvl1" name="three_lvl" min="1" max="20" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -372,7 +372,7 @@
                         </select>
                     </div>
                     <div class="three_vx3">
-                        <label for="three_3lvl1">VX 3:</label>
+                        <label for="three_3lvl1">vx 3:</label>
                         <select class="teamSelect" onchange="threeVx()" type="number" id="three_3lvl1" name="three_lvl" min="1" max="20" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -419,21 +419,21 @@
                         </select>
                     </div>
                     <div class="totalsDiv">
-                        <p>ttl req to lvl up:</p>
-                        RUNS: <input class="resultField1" type="number" name="three_ttl_runs" id="three_ttl_runs" readonly="readonly" />
+                        <p>Ttl Required to Lvl Up :</p>
+                        Runs : <input class="resultField1" type="number" name="three_ttl_runs" id="three_ttl_runs" readonly="readonly" />
                         <br><br>
-                        NANAS: <input class="resultField2" type="number" name="three_ttl_nanas" id="three_ttl_nanas" readonly="readonly" />
+                        Nanas : <input class="resultField2" type="number" name="three_ttl_nanas" id="three_ttl_nanas" readonly="readonly" />
                         <br><br>
-                        KONGIUM: <input class="resultField3" type="number" name="three_ttl_kg" id="three_ttl_kg" readonly="readonly" />
+                        Kongium : <input class="resultField3" type="number" name="three_ttl_kg" id="three_ttl_kg" readonly="readonly" />
                         <br><br>
-                        <p>Nana Cost: </p>
+                        <p>Nana Cost : </p>
                         <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
                         <input class="priceField" type="number" name="three_usd_price" id="three_usd_price" readonly="readonly" />
                         <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
                         <input class="priceField" type="number" name="three_eth_price" id="three_eth_price" readonly="readonly" />
                         <br><br>
-                        <p>Collected from Runs: </p>
-                        AVG KG: <input class="resultField4" type="number" name="three_kg_collect" id="three_kg_collect" readonly="readonly" />
+                        <p>Collected from Runs : </p>
+                        Avg Kongium : <input class="resultField4" type="number" name="three_kg_collect" id="three_kg_collect" readonly="readonly" />
                     </div>
                 </form>
             </fieldset>
@@ -444,7 +444,7 @@
             <fieldset class="field_four">
                 <form>
                     <div class="four_vx12">
-                        <label for="four_1lvl1">VX 1:</label>
+                        <label for="four_1lvl1">vx 1:</label>
                         <select class="teamSelect" onchange="fourVx()" type="number" id="four_1lvl1" name="four_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -489,7 +489,7 @@
                             <option label="19" value="19"></option>
                             <option label="20" value="20"></option>
                         </select>
-                        <label for="four_2lvl1">VX 2:</label>
+                        <label for="four_2lvl1">vx 2:</label>
                         <select class="teamSelect" onchange="fourVx()" type="number" id="four_2lvl1" name="four_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -537,7 +537,7 @@
                     </div>
                     <br>
                     <div class="four_vx34">
-                        <label for="four_3lvl1">VX 3:</label>
+                        <label for="four_3lvl1">vx 3:</label>
                         <select class="teamSelect" onchange="fourVx()" type="number" id="four_3lvl1" name="four_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -582,7 +582,7 @@
                             <option label="19" value="19"></option>
                             <option label="20" value="20"></option>
                         </select>
-                        <label for="four_4lvl1">VX 4:</label>
+                        <label for="four_4lvl1">vx 4:</label>
                         <select class="teamSelect" onchange="fourVx()" type="number" id="four_4lvl1" name="four_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -629,21 +629,21 @@
                         </select>
                     </div>
                     <div class="totalsDiv">
-                        <p>ttl req to lvl up:</p>
-                        RUNS: <input class="resultField1" type="number" name="four_ttl_runs" id="four_ttl_runs" readonly="readonly" />
+                        <p>Ttl Required to Lvl Up :</p>
+                        Runs : <input class="resultField1" type="number" name="four_ttl_runs" id="four_ttl_runs" readonly="readonly" />
                         <br><br>
-                        NANAS: <input class="resultField2" type="number" name="four_ttl_nanas" id="four_ttl_nanas" readonly="readonly" />
+                        Nanas : <input class="resultField2" type="number" name="four_ttl_nanas" id="four_ttl_nanas" readonly="readonly" />
                         <br><br>
-                        KONGIUM: <input class="resultField3" type="number" name="four_ttl_kg" id="four_ttl_kg" readonly="readonly" />
+                        Kongium :<input class="resultField3" type="number" name="four_ttl_kg" id="four_ttl_kg" readonly="readonly" />
                         <br><br>
-                        <p>Nana Cost: </p>
+                        <p>Nana Cost : </p>
                         <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
                         <input class="priceField" type="number" name="four_usd_price" id="four_usd_price" readonly="readonly" />
                         <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
                         <input class="priceField" type="number" name="four_eth_price" id="four_eth_price" readonly="readonly" />
                         <br><br>
-                        <p>Collected from Runs: </p>
-                        AVG KG: <input class="resultField4" type="number" name="four_kg_collect" id="four_kg_collect" readonly="readonly" />
+                        <p>Collected from Runs : </p>
+                        Avg Kongium : <input class="resultField4" type="number" name="four_kg_collect" id="four_kg_collect" readonly="readonly" />
                     </div>
                 </form>
             </fieldset>
@@ -654,7 +654,7 @@
             <fieldset class="field_five">
                 <form>
                     <div class="five_vx12">
-                        <label for="five_1lvl1">VX 1:</label>
+                        <label for="five_1lvl1">vx 1:</label>
                         <select class="teamSelect" onchange="fiveVx()" type="number" id="five_1lvl1" name="five_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -699,7 +699,7 @@
                             <option label="19" value="19"></option>
                             <option label="20" value="20"></option>
                         </select>
-                        <label for="five_2lvl1">VX 2:</label>
+                        <label for="five_2lvl1">vx 2:</label>
                         <select class="teamSelect" onchange="fiveVx()" type="number" id="five_2lvl1" name="five_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -747,7 +747,7 @@
                     </div>
                     <br>
                     <div class="five_vx34">
-                        <label for="five_3lvl1">VX 3:</label>
+                        <label for="five_3lvl1">vx 3:</label>
                         <select class="teamSelect" onchange="fiveVx()" type="number" id="five_3lvl1" name="five_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -792,7 +792,7 @@
                             <option label="19" value="19"></option>
                             <option label="20" value="20"></option>
                         </select>
-                        <label for="five_4lvl1">VX 4:</label>
+                        <label for="five_4lvl1">vx 4:</label>
                         <select class="teamSelect" onchange="fiveVx()" type="number" id="five_4lvl1" name="five_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -839,7 +839,7 @@
                         </select>
                     </div>
                     <div class="five_vx5">
-                        <label for="five_5lvl1">VX 5:</label>
+                        <label for="five_5lvl1">vx 5:</label>
                         <select class="teamSelect" onchange="fiveVx()" type="number" id="five_5lvl1" name="five_lvl" min="1" max="19" required>
                             <option label="1" value="1"></option>
                             <option label="2" value="2"></option>
@@ -886,21 +886,21 @@
                         </select>
                         </div>
                         <div class="totalsDiv">
-                            <p>ttl req to lvl up:</p>
-                            RUNS: <input class="resultField1" type="number" name="five_ttl_runs" id="five_ttl_runs" readonly="readonly" />
+                            <p>Ttl Required to Lvl Up :</p>
+                            Runs : <input class="resultField1" type="number" name="five_ttl_runs" id="five_ttl_runs" readonly="readonly" />
                             <br><br>
-                            NANAS: <input class="resultField2" type="number" name="five_ttl_nanas" id="five_ttl_nanas" readonly="readonly" />
+                            Nanas : <input class="resultField2" type="number" name="five_ttl_nanas" id="five_ttl_nanas" readonly="readonly" />
                             <br><br>
-                            KONGIUM: <input class="resultField3" type="number" name="five_ttl_kg" id="five_ttl_kg" readonly="readonly" />
+                            Kongium :<input class="resultField3" type="number" name="five_ttl_kg" id="five_ttl_kg" readonly="readonly" />
                             <br><br>
-                            <p>Nana Cost: </p>
+                            <p>Nana Cost : </p>
                             <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
                             <input class="priceField" type="number" name="five_usd_price" id="five_usd_price" readonly="readonly" />
                             <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
                             <input class="priceField" type="number" name="five_eth_price" id="five_eth_price" readonly="readonly" />
                             <br><br>
-                            <p>Collected from Runs: </p>
-                            AVG KG: <input class="resultField4" type="number" name="five_kg_collect" id="five_kg_collect" readonly="readonly" />
+                            <p>Collected from Runs : </p>
+                            Avg Kongium :<input class="resultField4" type="number" name="five_kg_collect" id="five_kg_collect" readonly="readonly" />
                     </div>
                 </form>
             </fieldset>
