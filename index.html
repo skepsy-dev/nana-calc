@@ -15,120 +15,103 @@
 
         <nav class="navbar">
             <a href="https://mytxns.com" target="_blank"><img class="navLogo" src="calc-images/mt-logo-white.png" alt="MyTxns"></a>
-            <a class="navLeft" href="https://mytxns.com" target="_blank">WL Tracking</a>
-
-            <a href="#" class="toggle-button">
-                <!-- <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span> -->
-            </a>
+            
             <div class="navbar-links">
-                <a href="https://www.cyberkongz.com/banana" target="_blank"><img class="nanaLogo" src="calc-images/animeBanana.gif" alt="Cyberkongz Banana"></a>
-                <a href="https://www.cyberkongz.com/jungle-adventure" target="_blank"><img class="ckLogo" src="calc-images/cklogo.png" alt="Cyberkongz"></a>
+                <a href="https://www.cyberkongz.com/banana" target="_blank"></a><img class="nanaPriceLogo" src="calc-images/animeBanana.gif" alt="banana"></a>
+                <img class="dollarSymbolWhite" src="calc-images/dollar_symbol_white.png" alt="usd">
+                <input class="nanaPriceField" type="number" name="banana_price" id="banana_price" readonly="readonly"/>
+
+                <a href="https://app.uniswap.org/#/swap?inputCurrency=0x94e496474f1725f1c1824cb5bdb92d7691a4f03a&chain=mainnet" 
+                    target="_blank"><img class="navEthLogo" src="calc-images/ethLogoWhite.png" alt="ethLogo"></a>
+                <a href="https://quickswap.exchange/#/swap?currency0=0x7ceb23fd6bc0add59e62ac25578270cff1b9f619&currency1=0xbc91347e80886453f3f8bbd6d7ac07c122d87735&swapIndex=0" 
+                    target="_blank"><img class="polyLogo" src="calc-images/polygon.png" alt="P"></a>
             </div>
         </nav>
-        <br><br>
-        <br><br><br> 
 
-        <div class="priceDiv">
-        <img class="nanaPriceLogo" src="calc-images/ck-nana.png" alt="banana">
-        <!-- <p class="dollarSymbolWhite">$</p> -->
-        <img class="dollarSymbolWhite" src="calc-images/dollar_symbol_white.png" alt="usd">
-        <input class="nanaPriceField" type="number" name="banana_price" id="banana_price" readonly="readonly" />
-        </div>
-
+        <br><br><br><br>
         <h2 style="text-align: center;">Nana Calculatoor</h2>
+        <br>
 
     <div class="tabsDiv">
-        <button class="tablink" onclick="openPage('pg0runs', this)" id="defaultOpen">Runs</button>
-        <button class="tablink" onclick="openPage('pg1vx', this)">1 vx</button>
-        <button class="tablink" onclick="openPage('pg2vx', this)">2 vx</button>
-        <button class="tablink" onclick="openPage('pg3vx', this)">3 vx</button>
-        <button class="tablink" onclick="openPage('pg4vx', this)">4 vx</button>
-        <button class="tablink" onclick="openPage('pg5vx', this)">5 vx</button>
+        <button class="tablink" onclick="openPage('pg0-runs', this)" id="defaultOpen">Runs</button>
+        <button class="tablink" onclick="openPage('pg1-nanas', this)">Nanas</button>
+        <button class="tablink" onclick="openPage('pg2-1vx', this)">1 vx</button>
+        <button class="tablink" onclick="openPage('pg3-teams', this)">Teams</button>
     </div>
 
-    <!-- Cost By Runs pg -->
-<div id="pg0runs" class="tabcontent">
-    <fieldset class="field_one">
-        <form>
-            <div class="one_lvl1">
-                <label for="byRunNum">Number Runs:</label>
-            <input onchange="ByRuns()" type="number" id="byRunNum" name="byRun" min="1" max="999999">
-            </div>
-            <br>
-            <div class="one_lvl2">
-                <label for="byRunVx">Number VX:</label>
-                <input onchange="ByRuns()" type="number" id="byRunVx" name="byRun" min="1" max="5">
-            </div>
-                <p>Nana Cost:</p>
-
-                <img class="nanaByRunCost" src="calc-images/ck-nana.png" alt="banana">
-                <input class="priceField" type="number" name="byRun_nana_price" id="byRun_nana_price" readonly="readonly" />
+    <!-- By Runs Pg -->
+    <div id="pg0-runs" class="tabcontent">
+        <fieldset class="field_one">
+            <form>
+                <div class="one_lvl1">
+                    <label for="byRunNum">Number Runs:</label>
+                <input onchange="ByRuns()" type="number" id="byRunNum" name="byRun" min="1" max="999999">
+                </div>
                 <br>
+                <div class="one_lvl2">
+                    <label for="byRunVx">Number VX:</label>
+                    <input onchange="ByRuns()" type="number" id="byRunVx" name="byRun" min="1" max="5">
+                </div>
+                    <p>Nana Cost:</p>
+
+                    <img class="nanaByRunCost" src="calc-images/ck-nana.png" alt="banana">
+                    <input class="priceField" type="number" name="byRun_nana_price" id="byRun_nana_price" readonly="readonly" />
+                    <br>
+                    <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
+                    <input class="priceField" type="number" name="usd_price" id="byRun_usd_price" readonly="readonly" />
+                    <br>
+                    <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
+                    <input class="priceField" type="number" name="eth_price" id="byRun_eth_price" readonly="readonly" />
+                    <br><br>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <!-- By Nanas Pg -->
+    <div id="pg1-nanas" class="tabcontent">
+        <fieldset class="field_one">
+            <form>
+                <div class="one_lvl1">
+                    <label for="byRunNum">Number Nanas:</label>
+                    <input onchange="ByNanas()" type="number" id="byNanaNum" name="byNana" min="1" max="999999">
+                </div>
+                <br>
+                <div class="one_lvl2">
+                    <label for="byRunVx">Number VX:</label>
+                    <input onchange="ByNanas()" type="number" id="byNanaVx" name="byNana" min="1" max="5">
+                </div>
+                <p>Results:</p>
+    
+                <img class="runsByNanaGif" src="calc-images/kekrun.gif" alt="kekrun">
+                <input class="priceField" type="number" name="byNana_runs" id="byNana_runs" readonly="readonly" />
+                <br>
+                <!-- <img class="kongiumByNanaPng" src="calc-images/kongium.gif" alt="kongium">
+                <input class="priceField" type="number" name="byNana_kongium" id="byNana_kongium" readonly="readonly" />
+                <br> -->
                 <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
-                <input class="priceField" type="number" name="usd_price" id="byRun_usd_price" readonly="readonly" />
+                <input class="priceField" type="number" name="usd_price" id="byNana_usd_price" readonly="readonly" />
                 <br>
                 <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
-                <input class="priceField" type="number" name="eth_price" id="byRun_eth_price" readonly="readonly" />
+                <input class="priceField" type="number" name="eth_price" id="byNana_eth_price" readonly="readonly" />
                 <br><br>
-            </div>
-        </form>
+    </div>
+    </form>
     </fieldset>
-</div>
+    </div>
    
    <!-- 1 VX pg -->
-    <div id="pg1vx" class="tabcontent">
+    <div id="pg2-1vx" class="tabcontent">
         <fieldset class="field_one">
             <form>
                 <div class="one_lvl1">
                     <label for="one_lvl_1">Current Lvl:</label>
-                        <select onchange="singleVx()" type="number" id="one_lvl_1" name="one_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                        </select>
+                    <input onchange="singleVx()" type="number" id="one_lvl_1" name="one_lvl" min="1" max="19" required>
                 </div>
                 <br>
                 <div class="one_lvl2">
                     <label for="one_lvl_2">Next Lvl:</label>
-                        <select onchange="singleVx()" type="number" id="one_lvl_2" name="one_lvl" min="2" max="20" required>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
+                    <input onchange="singleVx()" type="number" id="one_lvl_2" name="one_lvl" min="2" max="20" required>
                 </div>
                 
                 <div class="totalsDiv">
@@ -153,737 +136,166 @@
         </fieldset>
         </div>
 
-        <!-- 2 VX page -->
-        <div id="pg2vx" class="tabcontent">
-            <fieldset class="field_two">
-                <form>
-                    <div class="two_vx1">
-                        <label for="two_1lvl1">vx 1:</label>
-                        <select class="teamSelect" onchange="twoVx()" type="number" id="two_1lvl1" name="two_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="twoVx()" type="number" id="two_1lvl2" name="two_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <div class="two_vx2">
-                        <label for="two_2lvl1">vx 2:</label>
-                        <select class="teamSelect" onchange="twoVx()" type="number" id="two_2lvl1" name="two_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="twoVx()" type="number" id="two_2lvl2" name="two_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="totalsDiv">
-                        <p>Ttl Required to Lvl Up:</p>
-                        Runs: <input class="resultField1" type="number" name="two_ttl_runs" id="two_ttl_runs" readonly="readonly" />
-                        <br><br>
-                        Nanas: <input class="resultField2" type="number" name="two_ttl_nanas" id="two_ttl_nanas" readonly="readonly" />
-                        <br><br>
-                        Kongium: <input class="resultField3" type="number" name="two_ttl_kg" id="two_ttl_kg" readonly="readonly" />
-                        <br><br>
-                        <p>Nana Cost:</p>
-                        <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
-                        <input class="priceField" type="number" name="two_usd_price" id="two_usd_price" readonly="readonly" />
-                        <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
-                        <input class="priceField" type="number" name="two_eth_price" id="two_eth_price" readonly="readonly" />
-                        <br><br>
-                        <p>Collected from Runs:</p>
-                        Avg Kongium: <input class="resultField4" type="number" name="two_kg_collect" id="two_kg_collect" readonly="readonly" />
-                    </div>
-                </form>
-            </fieldset>
-        </div>
 
-        <!-- 3 VX page -->
-        <div id="pg3vx" class="tabcontent">
-            <fieldset class="field_three">
-                <form>
-                    <div class="three_vx1">
-                        <label for="three_1lvl1">vx 1:</label>
-                        <select class="teamSelect" onchange="threeVx()" type="number" id="three_1lvl1" name="three_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="threeVx()" type="number" id="three_1lvl2" name="three_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <div class="three_vx2">
-                        <label for="three_2lvl1">vx 2:</label>
-                        <select class="teamSelect" onchange="threeVx()" type="number" id="three_2lvl1" name="three_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="threeVx()" type="number" id="three_2lvl2" name="three_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <div class="three_vx3">
-                        <label for="three_3lvl1">vx 3:</label>
-                        <select class="teamSelect" onchange="threeVx()" type="number" id="three_3lvl1" name="three_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="threeVx()" type="number" id="three_3lvl2" name="three_lvl" min="1" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <div class="totalsDiv">
-                        <p>Ttl Required to Lvl Up:</p>
-                        Runs: <input class="resultField1" type="number" name="three_ttl_runs" id="three_ttl_runs" readonly="readonly" />
-                        <br><br>
-                        Nanas: <input class="resultField2" type="number" name="three_ttl_nanas" id="three_ttl_nanas" readonly="readonly" />
-                        <br><br>
-                        Kongium: <input class="resultField3" type="number" name="three_ttl_kg" id="three_ttl_kg" readonly="readonly" />
-                        <br><br>
-                        <p>Nana Cost:</p>
-                        <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
-                        <input class="priceField" type="number" name="three_usd_price" id="three_usd_price" readonly="readonly" />
-                        <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
-                        <input class="priceField" type="number" name="three_eth_price" id="three_eth_price" readonly="readonly" />
-                        <br><br>
-                        <p>Collected from Runs:</p>
-                        Avg Kongium: <input class="resultField4" type="number" name="three_kg_collect" id="three_kg_collect" readonly="readonly" />
-                    </div>
-                </form>
-            </fieldset>
-        </div>
+        <!-- Teams Page -->
+        <div id="pg3-teams" class="tabcontent">
 
-        <!-- 4 VX page -->
-        <div id="pg4vx" class="tabcontent">
-            <fieldset class="field_four">
-                <form>
-                    <div class="four_vx12">
-                        <label for="four_1lvl1">vx 1:</label>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_1lvl1" name="four_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_1lvl2" name="four_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <label for="four_2lvl1">vx 2:</label>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_2lvl1" name="four_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_2lvl2" name="four_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="four_vx34">
-                        <label for="four_3lvl1">vx 3:</label>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_3lvl1" name="four_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_3lvl2" name="four_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <label for="four_4lvl1">vx 4:</label>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_4lvl1" name="four_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fourVx()" type="number" id="four_4lvl2" name="four_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <div class="totalsDiv">
-                        <p>Ttl Required to Lvl Up:</p>
-                        Runs: <input class="resultField1" type="number" name="four_ttl_runs" id="four_ttl_runs" readonly="readonly" />
-                        <br><br>
-                        Nanas: <input class="resultField2" type="number" name="four_ttl_nanas" id="four_ttl_nanas" readonly="readonly" />
-                        <br><br>
-                        Kongium: <input class="resultField3" type="number" name="four_ttl_kg" id="four_ttl_kg" readonly="readonly" />
-                        <br><br>
-                        <p>Nana Cost:</p>
-                        <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
-                        <input class="priceField" type="number" name="four_usd_price" id="four_usd_price" readonly="readonly" />
-                        <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
-                        <input class="priceField" type="number" name="four_eth_price" id="four_eth_price" readonly="readonly" />
-                        <br><br>
-                        <p>Collected from Runs:</p>
-                        Avg Kongium: <input class="resultField4" type="number" name="four_kg_collect" id="four_kg_collect" readonly="readonly" />
-                    </div>
-                </form>
-            </fieldset>
-        </div>
+            <div class="teamsTabsDiv">
+                <button class="teamsTabLink" onclick="openTab('tab1-2vx', this)" id="defaultTabOpen">2 vx</button>
+                <button class="teamsTabLink" onclick="openTab('tab2-3vx', this)">3 vx</button>
+                <button class="teamsTabLink" onclick="openTab('tab3-4vx', this)">4 vx</button>
+                <button class="teamsTabLink" onclick="openTab('tab4-5vx', this)">5 vx</button>
+            </div>
 
-        <!-- 5 VX page -->
-        <div id="pg5vx" class="tabcontent">
-            <fieldset class="field_five">
-                <form>
-                    <div class="five_vx12">
-                        <label for="five_1lvl1">vx 1:</label>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_1lvl1" name="five_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_1lvl2" name="five_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <label for="five_2lvl1">vx 2:</label>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_2lvl1" name="five_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_2lvl2" name="five_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="five_vx34">
-                        <label for="five_3lvl1">vx 3:</label>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_3lvl1" name="five_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_3lvl2" name="five_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <label for="five_4lvl1">vx 4:</label>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_4lvl1" name="five_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_4lvl2" name="five_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                    </div>
-                    <div class="five_vx5">
-                        <label for="five_5lvl1">vx 5:</label>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_5lvl1" name="five_lvl" min="1" max="19" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
-                        <select class="teamSelect" onchange="fiveVx()" type="number" id="five_5lvl2" name="five_lvl" min="2" max="20" required>
-                            <option label="1" value="1"></option>
-                            <option label="2" value="2"></option>
-                            <option label="3" value="3"></option>
-                            <option label="4" value="4"></option>
-                            <option label="5" value="5"></option>
-                            <option label="6" value="6"></option>
-                            <option label="7" value="7"></option>
-                            <option label="8" value="8"></option>
-                            <option label="9" value="9"></option>
-                            <option label="10" value="10"></option>
-                            <option label="11" value="11"></option>
-                            <option label="12" value="12"></option>
-                            <option label="13" value="13"></option>
-                            <option label="14" value="14"></option>
-                            <option label="15" value="15"></option>
-                            <option label="16" value="16"></option>
-                            <option label="17" value="17"></option>
-                            <option label="18" value="18"></option>
-                            <option label="19" value="19"></option>
-                            <option label="20" value="20"></option>
-                        </select>
+
+
+            <!-- 2 VX Teams Tab -->
+            <div id="tab1-2vx" class="teamsTabContent">
+                <fieldset class="field_two">
+                    <form>
+                        <div class="two_vx1">
+                            <label for="two_1lvl1">vx 1:</label>
+                            <input onchange="twoVx()" type="number" id="two_1lvl1" name="two_lvl" min="1" max="19" required>
+                            <input onchange="twoVx()" type="number" id="two_1lvl2" name="two_lvl" min="2" max="20" required>
+                        </div>
+                        <div class="two_vx2">
+                            <label for="two_2lvl1">vx 2:</label>
+                            <input onchange="twoVx()" type="number" id="two_2lvl1" name="two_lvl" min="1" max="19" required>
+                            <input onchange="twoVx()" type="number" id="two_2lvl2" name="two_lvl" min="2" max="20" required>
+                        </div>
+                        <br>
+                        <div class="totalsDiv">
+                            <p>Ttl Required to Lvl Up:</p>
+                            Runs: <input class="resultField1" type="number" name="two_ttl_runs" id="two_ttl_runs" readonly="readonly" />
+                            <br><br>
+                            Nanas: <input class="resultField2" type="number" name="two_ttl_nanas" id="two_ttl_nanas" readonly="readonly" />
+                            <br><br>
+                            Kongium: <input class="resultField3" type="number" name="two_ttl_kg" id="two_ttl_kg" readonly="readonly" />
+                            <br><br>
+                            <p>Nana Cost:</p>
+                            <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
+                            <input class="priceField" type="number" name="two_usd_price" id="two_usd_price" readonly="readonly" />
+                            <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
+                            <input class="priceField" type="number" name="two_eth_price" id="two_eth_price" readonly="readonly" />
+                            <br><br>
+                            <p>Collected from Runs:</p>
+                            Avg Kongium: <input class="resultField4" type="number" name="two_kg_collect" id="two_kg_collect" readonly="readonly" />
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+
+            <!-- 3 VX page -->
+            <div id="tab2-3vx" class="teamsTabContent">
+                <fieldset class="field_three">
+                    <form>
+                        <div class="three_vx1">
+                            <label for="three_1lvl1">vx 1:</label>
+                            <input onchange="threeVx()" type="number" id="three_1lvl1" name="three_lvl" min="1" max="19" required>
+                            <input onchange="threeVx()" type="number" id="three_1lvl2" name="three_lvl" min="2" max="20" required>
+                        </div>
+                        <div class="three_vx2">
+                            <label for="three_2lvl1">vx 2:</label>
+                            <input onchange="threeVx()" type="number" id="three_2lvl1" name="three_lvl" min="1" max="19" required>
+                            <input onchange="threeVx()" type="number" id="three_2lvl2" name="three_lvl" min="2" max="20" required>
+                        </div>
+                        <div class="three_vx3">
+                            <label for="three_3lvl1">vx 3:</label>
+                            <input onchange="threeVx()" type="number" id="three_3lvl1" name="three_lvl" min="1" max="19" required>
+                            <input onchange="threeVx()" type="number" id="three_3lvl2" name="three_lvl" min="2" max="20" required>
+                        </div>
+                        <div class="totalsDiv">
+                            <p>Ttl Required to Lvl Up:</p>
+                            Runs: <input class="resultField1" type="number" name="three_ttl_runs" id="three_ttl_runs" readonly="readonly" />
+                            <br><br>
+                            Nanas: <input class="resultField2" type="number" name="three_ttl_nanas" id="three_ttl_nanas" readonly="readonly" />
+                            <br><br>
+                            Kongium: <input class="resultField3" type="number" name="three_ttl_kg" id="three_ttl_kg" readonly="readonly" />
+                            <br><br>
+                            <p>Nana Cost:</p>
+                            <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
+                            <input class="priceField" type="number" name="three_usd_price" id="three_usd_price" readonly="readonly" />
+                            <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
+                            <input class="priceField" type="number" name="three_eth_price" id="three_eth_price" readonly="readonly" />
+                            <br><br>
+                            <p>Collected from Runs:</p>
+                            Avg Kongium: <input class="resultField4" type="number" name="three_kg_collect" id="three_kg_collect" readonly="readonly" />
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+
+            <!-- 4 VX page -->
+            <div id="tab3-4vx" class="teamsTabContent">
+                <fieldset class="field_four">
+                    <form>
+                        <div class="four_vx12">
+                            <label for="four_1lvl1">vx 1:</label>
+                            <input onchange="fourVx()" type="number" id="four_1lvl1" name="four_lvl" min="1" max="19" required>
+                            <input onchange="fourVx()" type="number" id="four_1lvl2" name="four_lvl" min="2" max="20" required>
+                           
+                            <label for="four_2lvl1">vx 2:</label>
+                            <input onchange="fourVx()" type="number" id="four_2lvl1" name="four_lvl" min="1" max="19" required>
+                            <input onchange="fourVx()" type="number" id="four_2lvl2" name="four_lvl" min="2" max="20" required>
+                        </div>
+                        <br>
+                        <div class="four_vx34">
+                            <label for="four_3lvl1">vx 3:</label>
+                            <input onchange="fourVx()" type="number" id="four_3lvl1" name="four_lvl" min="1" max="19" required>
+                            <input onchange="fourVx()" type="number" id="four_3lvl2" name="four_lvl" min="2" max="20" required>
+                            
+                            <label for="four_4lvl1">vx 4:</label>
+                            <input onchange="fourVx()" type="number" id="four_4lvl1" name="four_lvl" min="1" max="19" required>
+                            <input onchange="fourVx()" type="number" id="four_4lvl2" name="four_lvl" min="2" max="20" required>
+                        </div>
+                        <div class="totalsDiv">
+                            <p>Ttl Required to Lvl Up:</p>
+                            Runs: <input class="resultField1" type="number" name="four_ttl_runs" id="four_ttl_runs" readonly="readonly" />
+                            <br><br>
+                            Nanas: <input class="resultField2" type="number" name="four_ttl_nanas" id="four_ttl_nanas" readonly="readonly" />
+                            <br><br>
+                            Kongium: <input class="resultField3" type="number" name="four_ttl_kg" id="four_ttl_kg" readonly="readonly" />
+                            <br><br>
+                            <p>Nana Cost:</p>
+                            <img class="usdLogo" src="calc-images/usd_logo.png" alt="usd">
+                            <input class="priceField" type="number" name="four_usd_price" id="four_usd_price" readonly="readonly" />
+                            <img class="ethLogo" src="calc-images/eth_logo.png" alt="eth">
+                            <input class="priceField" type="number" name="four_eth_price" id="four_eth_price" readonly="readonly" />
+                            <br><br>
+                            <p>Collected from Runs:</p>
+                            Avg Kongium: <input class="resultField4" type="number" name="four_kg_collect" id="four_kg_collect" readonly="readonly" />
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+
+            <!-- 5 VX page -->
+            <div id="tab4-5vx" class="teamsTabContent">
+                <fieldset class="field_five">
+                    <form>
+                        <div class="five_vx12">
+                            <label for="five_1lvl1">vx 1:</label>
+                            <input onchange="fiveVx()" type="number" id="five_1lvl1" name="five_lvl" min="1" max="19" required>
+                            <input onchange="fiveVx()" type="number" id="five_1lvl2" name="five_lvl" min="2" max="20" required>
+                            
+                            <label for="five_2lvl1">vx 2:</label>
+                            <input onchange="fiveVx()" type="number" id="five_2lvl1" name="five_lvl" min="1" max="19" required>
+                            <input onchange="fiveVx()" type="number" id="five_2lvl2" name="five_lvl" min="2" max="20" required>
+                        </div>
+                        <br>
+                        <div class="five_vx34">
+                            <label for="five_3lvl1">vx 3:</label>
+                            <input onchange="fiveVx()" type="number" id="five_3lvl1" name="five_lvl" min="1" max="19" required>
+                            <input onchange="fiveVx()" type="number" id="five_3lvl2" name="five_lvl" min="2" max="20" required>
+                           
+                            <label for="five_4lvl1">vx 4:</label>
+                            <input onchange="fiveVx()" type="number" id="five_4lvl1" name="five_lvl" min="1" max="19" required>
+                            <input onchange="fiveVx()" type="number" id="five_4lvl2" name="five_lvl" min="2" max="20" required>
+                        </div>
+                        <div class="five_vx5">
+                            <label for="five_5lvl1">vx 5:</label>
+                            <input onchange="fiveVx()" type="number" id="five_5lvl1" name="five_lvl" min="1" max="19" required>
+                            <input onchange="fiveVx()" type="number" id="five_5lvl2" name="five_lvl" min="2" max="20" required>
                         </div>
                         <div class="totalsDiv">
                             <p>Ttl Required to Lvl Up:</p>
@@ -901,11 +313,11 @@
                             <br><br>
                             <p>Collected from Runs:</p>
                             Avg Kongium: <input class="resultField4" type="number" name="five_kg_collect" id="five_kg_collect" readonly="readonly" />
-                    </div>
-                </form>
-            </fieldset>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
         </div>
-
 
     </body>
 </html>

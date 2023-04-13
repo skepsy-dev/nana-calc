@@ -67,41 +67,16 @@ button {
 }
 
 
+
+
+
+
+
+
+
+
+
 /* all pgs */
-
-.priceDiv {
-    margin: 0 35%;
-    display: inline-flex;
-}
-
-.nanaPriceLogo {
-    width: auto;
-    height: 13px;
-    transform: rotate(300deg);
-    padding-right: 15px;
-    padding-top: 1px;
-}
-
-.dollarSymbolWhite {
-    width: auto;
-    height: 12px;
-    padding-right: 10px;
-    padding-top: 7px;
-}
-
-.nanaPriceField {
-    width: 80px;
-    border: none;
-    background-color: #222222;
-    font-family: 'bodyFont';
-    font-size: 17px;
-    color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
 .resultField1 {
     width: 60px;
     border: none;
@@ -143,23 +118,17 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.nanaByRunCost {
-    width: auto;
-    height: 10px;
-    transform: rotate(300deg);
-    padding-right: 3px;
+    margin: 5px 0 5px 0;
 }
 
 .usdLogo {
-    width: auto;
-    height: 10px;
+    width: 7px;
+    height: auto;
 }
 
 .ethLogo {
-    width: auto;
-    height: 10px;
+    width: 12px;
+    height: auto;
 }
 
 .totalsDiv {
@@ -168,8 +137,32 @@ button {
 }
 
 
-/* 1 vx */
 
+
+/* By Runs Pg */
+.nanaByRunCost {
+    width: auto;
+    height: 10px;
+    transform: rotate(300deg);
+}
+
+
+/* By Nanas Pg */
+.runsByNanaGif {
+    width: auto;
+    height: 20px;
+}
+
+.kongiumByNanaPng {
+    width: auto;
+    height: 20px;
+}
+
+
+
+
+
+/* 1 vx */
 .field_one {
     background-color: #fffada;
     color: #000000;
@@ -277,6 +270,21 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* tabs */
 
  /* Style tab links */
@@ -317,139 +325,117 @@ button {
      height: 100%;
  }
 
- #pg1vx {
-     background-color: none;
- }
+ 
 
- #pg2vx {
-     background-color: none;
- }
 
- #pg3vx {
-     background-color: none;
- }
 
- #pg4vx {
-     background-color: none;
- }
 
- #pg5vx {
-     background-color: none;
- }
+
+/* Teams Tabs Buttons*/
+.teamsTabsDiv {
+
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teamsTabsDiv {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teamsTabLink {
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 3px 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    width: fit-content;
+}
+
+.teamsTabLink:hover {
+    color: #fffada;
+    border-bottom: 0.5px solid #fffada;
+}
+
+/* Create an active/current "tab button" class */
+.teamsTabLink button:active {
+    color: #fffada;
+    border-bottom: 0.5px solid #fffada;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.teamsTabContent {
+    color: white;
+    display: none;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
 /* start navbar */
-
-/* .navBar {
-    background-color: none;
-} */
-
 .navLogo {
     width: auto;
     height: 45px;
     float: left;
-    padding-top: 27px;
-    padding-left: 25px;
-}
-
-.navLeft {
-    float: left;
-    padding-top: 55px;
-    padding-left: 1%;
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-}
-
-.ckLogo {
-    width: auto;
-    height: 30px;
-}
-
-.nanaLogo {
-    width: auto;
-    height: 30px;
+    padding-top: 2%;
+    padding-left: 5%;
 }
 
 .navbar-links {
     float: right;
-    margin-top: 35px;
-    margin-right: 25px;
+    margin-top: 3%;
+    margin-right: 5%;
 }
 
-/* .navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-} */
-
-/* .navbar-links li {
-    list-style: none;
-    text-size-adjust: 5px;
-} */
-
-/* .navbar-links li a {
-    display: block;
-    text-decoration: none;
-    padding: 1rem;
-    font-size: .77em;
-} */
-/* 
-.navbar-links li:hover {
-    background-color: none;
-} */
-
-/* .toggle-button {
-    position: absolute;
-    top: 4%;
-    right: 5%;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 20px;
-    height: 13px;
+.nanaPriceLogo {
+    width: 15px;
+    height: auto;
+    scale: 150%;
 }
 
-.toggle-button .bar {
-    height: 1px;
-    width: 100%;
-    background-color: white;
-    border-radius: 25px;
+.dollarSymbolWhite {
+    width: 10px;
+    height: auto;
 }
 
-@media (max-width: 800px) {
-    .toggle-button {
-        display: flex;
-    }
+.nanaPriceField {
+    width: 107px;
+    border: none;
+    background-color: #222222;
+    font-family: 'bodyFont';
+    font-size: 25px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 0;
+}
 
-    .navbar-links {
-        display: none;
+.navEthLogo {
+    width: 23px;
+    height: auto;
+    padding-right: 13px;
+}
 
-    }
+.polyLogo {
+    width: 23px;
+    height: auto;
+}
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-links ul {
-
-        flex-direction: column;
-        padding-top: 40px;
-    }
-
-    .navbar-links li {
-        text-align: right;
-    }
-
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-} */
 
 /* end navbar */

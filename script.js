@@ -1,9 +1,10 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+
+
+
+
+
+
 
 // Cost By Runs
 
@@ -18,6 +19,24 @@ function ByRuns() {
 
   costByRuns(ttlnana);
 }
+
+
+// By Nanas
+
+function ByNanas() {
+  var numNanas = document.getElementsByName('byNana')[0].value; // Number of Nanas
+  var numVx = document.getElementsByName('byNana')[1].value; // Number of VX for Runs
+  
+  // nana per run
+  var npr = (numVx * 0.4);
+  var ttlruns = (numNanas / npr);
+
+  document.getElementById('byNana_runs').value = ttlruns;
+
+  runsByNanas(numNanas);
+}
+
+
 
 
 // 1 VX
@@ -268,6 +287,19 @@ async function costByRuns (nanas) {
   document.getElementById('byRun_eth_price').value = nanaEthPrice * nanas;
 }
 
+async function runsByNanas (nanas) {
+  
+  let usdResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=usd');
+  let usdData = await usdResponse.json();
+  let nanaUsdPrice = usdData.banana.usd
+  
+  let ethrResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=banana&vs_currencies=eth');
+  let ethData = await ethrResponse.json();
+  let nanaEthPrice = ethData.banana.eth
+
+  document.getElementById('byNana_usd_price').value = nanaUsdPrice * nanas;
+  document.getElementById('byNana_eth_price').value = nanaEthPrice * nanas;
+}
 
 async function nanaPricesSingle (nanas) {
   
@@ -340,8 +372,7 @@ async function nanaPricesFiveVx (nanas) {
 }
 
 
-// tabs
-
+// Page Tabs
 function openPage(pageName, elmnt, color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -359,6 +390,28 @@ function openPage(pageName, elmnt, color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
+
+
+
+
+// Teams Tabs
+
+function openTab(pageName, elmnt, color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("teamsTabContent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("teamsTabLink");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+};
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultTabOpen").click();
 
 
 
